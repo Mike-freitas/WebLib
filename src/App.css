@@ -3,12 +3,12 @@
   transition: background 0.3s, color 0.3s;
 }
 
-.app.light {
+.light {
   background: #ffffff;
   color: #000000;
 }
 
-.app.dark {
+.dark {
   background: #1e1e1e;
   color: #ffffff;
 }

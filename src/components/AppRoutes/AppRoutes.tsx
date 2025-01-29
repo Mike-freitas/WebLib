@@ -23,7 +23,7 @@ const AppRoutes: React.FC<AppRoutesProps> = ({ theme, filter }) => {
         <Route path="/learn" element={<LearnPage />} />
         <Route path="/build" element={<BuildPage />} />
         <Route path="/connect" element={<ConnectPage />} />
-        <Route path="/cards" element={<Cards theme={theme} filter={filter} />} />
+        <Route path="/cards" element={<Cards filter={filter} />} />
       </Routes>
     </Suspense>
   );

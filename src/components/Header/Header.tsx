@@ -1,15 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Header.css';
 
 interface HeaderProps {
   toggleDarkMode: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ toggleDarkMode }) => {
-  const handleScrollToSection = (id: string) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+const Header: React.FC<HeaderProps> = () => {
+  const [theme, setTheme] = useState<string>(() => {
+    // Verificar se já existe um tema salvo no localStorage
+    return localStorage.getItem('theme') || 'light';
+  });
+
+  useEffect(() => {
+    // A cada mudança de tema, atualizar o localStorage e aplicar a classe no body
+    document.body.className = theme;
+    localStorage.setItem('theme', theme); // Salvar no localStorage
+  }, [theme]);
+
+  const handleToggleDarkMode = () => {
+    // Alternar o tema
+    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
+  };
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -21,7 +37,7 @@ const Header: React.FC<HeaderProps> = ({ toggleDarkMode }) => {
           href="#learn-page"
           onClick={(e) => {
             e.preventDefault();
-            handleScrollToSection('learn-page');
+            scrollToSection('learn-page'); // Rolar para a seção Learn
           }}
         >
           Learn
@@ -30,7 +46,7 @@ const Header: React.FC<HeaderProps> = ({ toggleDarkMode }) => {
           href="#build-page"
           onClick={(e) => {
             e.preventDefault();
-            handleScrollToSection('build-page');
+            scrollToSection('build-page'); // Rolar para a seção Build
           }}
         >
           Build
@@ -39,13 +55,13 @@ const Header: React.FC<HeaderProps> = ({ toggleDarkMode }) => {
           href="#connect-page"
           onClick={(e) => {
             e.preventDefault();
-            handleScrollToSection('connect-page');
+            scrollToSection('connect-page'); // Rolar para a seção Connect
           }}
         >
           Connect
         </a>
       </nav>
-      <button className="theme-toggle" onClick={toggleDarkMode}>
+      <button className="theme-toggle" onClick={handleToggleDarkMode}>
         Toggle Mode
       </button>
     </header>
