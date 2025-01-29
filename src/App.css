@@ -1,0 +1,14 @@
+.app {
+  font-family: Arial, sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+.app.light {
+  background: #ffffff;
+  color: #000000;
+}
+
+.app.dark {
+  background: #1e1e1e;
+  color: #ffffff;
+}

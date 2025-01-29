@@ -1,0 +1,142 @@
+/* Estilos Gerais */
+.main {
+  margin-top: 20em;
+  padding: 2rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+.main.light {
+  background-color: #ffffff;
+  color: #333;
+}
+
+.main.dark {
+  background-color: #1e1e1e;
+  color: #ffffff; /* Ajuste para garantir contraste adequado */
+}
+
+/* Estilo para a seção do Banner */
+.banner {
+  text-align: center;
+  padding: 1rem;
+  transition: background 0.5s; /* Transição suave para a mudança de fundo */
+  border-radius: 10px;
+  max-width: 100%; /* Garante que o carrossel ocupe toda a largura disponível */
+  margin: 0 auto; /* Centraliza o carrossel */
+}
+
+/* Tema claro */
+.banner.light {
+  background: #b1b0b0; /* Cor de fundo para o tema claro */
+}
+
+/* Tema escuro */
+.banner.dark {
+  background: #e7e5e5; /* Cor de fundo para o tema escuro */
+}
+
+/* Carrossel */
+.banner .slick-slider {
+  position: relative;
+  width: 100%; /* Garante que o carrossel ocupe toda a largura disponível */
+  margin: 0 auto;
+}
+
+.banner-slide {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.banner-slide h1,
+p {
+  color: black;
+}
+
+.banner-slide h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.banner-slide p {
+  font-size: 1rem;
+}
+
+/* Estilos de controle do carrossel */
+.slick-dots {
+  bottom: 10px;
+  z-index: 2;
+}
+
+.slick-dots li button:before {
+  color: white;
+  font-size: 16px;
+}
+
+.slick-prev,
+.slick-next {
+  display: block; /* Garante que estejam visíveis */
+  font-size: 24px;
+  z-index: 1;
+  color: white;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.card {
+  background: #0073e6;
+  color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  flex: 1;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.cards .card.light {
+  background: #0073e6;
+}
+
+.cards .card.dark {
+  background: #444;
+}
+
+.custom-arrow {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.custom-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}

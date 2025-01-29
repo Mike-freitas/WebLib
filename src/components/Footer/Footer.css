@@ -1,0 +1,126 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Footer Container */
+.footer {
+  background: linear-gradient(135deg, #0073e6, #005bb5);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Content */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Footer Info */
+.footer-info {
+  flex: 1;
+  max-width: 300px;
+}
+
+.footer-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-info p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Footer Navigation */
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.footer-nav a {
+  color: #cce7ff;
+  text-decoration: none; /* Remove a linha padrão */
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.footer-nav a:hover {
+  color: #fff;
+}
+
+/* Underline Animation for Footer Links */
+.footer-nav a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #cce7ff;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.footer-nav a:hover::after {
+  width: 100%;
+}
+
+/* Social Links */
+.footer-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon {
+  height: 25px;
+  text-decoration: none;
+  color: #cce7ff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.social-icon:hover {
+  color: #fff;
+}
+
+/* Underline Animation for Social Links */
+.social-icon::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #cce7ff;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.social-icon:hover::after {
+  width: 100%;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid #cce7ff;
+  padding-top: 1rem;
+}
